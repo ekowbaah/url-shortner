@@ -18,7 +18,6 @@ const DEFAULT_CACHE_CONTROL_HEADER_VALUE: &str =
 
 #[derive(serde::Deserialize, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
-
 pub struct Link {
     pub id: String,
     pub target_url: String,

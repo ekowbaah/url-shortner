@@ -15,9 +15,9 @@ jobs:
     env:
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
     steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-        with: { components: rustfmt, clippy }
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: dtolnay/rust-toolchain@686976e191b89faba57d3206551f0f330d8cb249 # stable
+        with: { components: "rustfmt, clippy" }
       - name: Install SQLx CLI
         run: cargo install sqlx-cli --version 0.8.6 --no-default-features --features rustls,postgres --locked
       - run: sqlx migrate run
